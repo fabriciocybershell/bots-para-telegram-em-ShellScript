@@ -5,7 +5,7 @@
   <img src="code3.png" width="290">
 </p>
 
-# princípio de funcionamento
+## princípio de funcionamento
 o bot recebe uma solicitação do tema seguido do código, então com base no comando recebido, ele pega uma váriável que contenha elementos html e css com o estilo visual, e grava em um arquivo novo com a ID do usuário do telegram.
 o bot possui em seu inicio uma sequência de variáveis, que são usadas para montar a página html com css do zero, com variaveis de montagem de topo, uma parte variável de acordo com cada estilo, e a variavel de fim, que grava elementos como </h3></div></html>,
 quando ele chega na metade da estrutura de montagem, ele trata a menssagem enviada pelo usuário e começa a usar "filtros", que identifiquem partes do código para colorir utilizando o comando SED.
