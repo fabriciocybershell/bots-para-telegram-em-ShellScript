@@ -1,7 +1,8 @@
 # bot de criação de códigos apresentaveis em imagem tematizada, baseada em carbon
 <p align="center">
-  <img src="code1.png" width="350">
-  <img src="code2.png" width="350">
+  <img src="code1.png" width="250">
+  <img src="code2.png" width="250">
+  <img src="code3.png" width="250">
 </p>
 #principio de funcionamento
 o bot recebe uma solicitação do tema seguido do código, então com base no comando recebido, ele pega uma váriável que contenha elementos html e css com o estilo visual, e grava em um arquivo novo com a ID do usuário do telegram.
