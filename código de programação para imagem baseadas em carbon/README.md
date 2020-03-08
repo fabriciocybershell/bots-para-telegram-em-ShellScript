@@ -1,5 +1,5 @@
-# bot de criação de códigos apresentaveis em imagem tematizada baseada em carbon
-
+# bot de criação de códigos apresentaveis em imagem tematizada, baseada em carbon
+![alt text](http://url/to/img.png)![alt text](http://url/to/img.png)![alt text](http://url/to/img.png)
 #principio de funcionamento
 o bot recebe uma solicitação do tema seguido do código, então com base no comando recebido, ele pega uma váriável que contenha elementos html e css com o estilo visual, e grava em um arquivo novo com a ID do usuário do telegram.
 o bot possui em seu inicio uma sequência de variáveis, que são usadas para montar a página html com css do zero, com variaveis de montagem de topo, uma parte variável de acordo com cada estilo, e a variavel de fim, que grava elementos como </h3></div></html>,
