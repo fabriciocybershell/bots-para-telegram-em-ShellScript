@@ -1,5 +1,5 @@
 # bot de criação de códigos apresentaveis em imagem tematizada, baseada em carbon
-<p align="center">
+<p align="left">
   <img src="code1.png" width="290">
   <img src="code2.png" width="290">
   <img src="code3.png" width="290">
