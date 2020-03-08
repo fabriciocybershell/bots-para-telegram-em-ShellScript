@@ -1,3 +1,4 @@
+<body style="bacground-color: blue;">
 # bot de criação de códigos apresentaveis em imagem tematizada, baseada em carbon
 <p align="left">
   <img src="code1.png" width="290">
@@ -11,3 +12,4 @@ quando ele chega na metade da estrutura de montagem, ele trata a menssagem envia
 em seguida o código tratado é gravado no html formado, e o seu restante é finalizado com a ultima variável de html/css.
 após a criação unica do arquivo com a ID e menssagem do usuário, o bot utiliza o wkhtmltoimage, pois o memso consegue interpretar URL, arquivos estáticos para gerar PDF e imagens, penssando nisso, ele pode interpretar o arquivo html gerado pelo bot e gerar uma imagem com o tamanho do código ejetado na montagem do arquivo, criando assim uma imagem bonita do código salva também com a 
 ID, que é enviada ao telegram, e tem os arquivos gerados deletados em seguida, para não gerar inundação do servidor ou maquina.
+</html>
