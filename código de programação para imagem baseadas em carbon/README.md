@@ -12,3 +12,26 @@ quando ele chega na metade da estrutura de montagem, ele trata a menssagem envia
 em seguida o código tratado é gravado no html formado, e o seu restante é finalizado com a ultima variável de html/css.
 após a criação unica do arquivo com a ID e menssagem do usuário, o bot utiliza o wkhtmltoimage, pois o memso consegue interpretar URL, arquivos estáticos para gerar PDF e imagens, penssando nisso, ele pode interpretar o arquivo html gerado pelo bot e gerar uma imagem com o tamanho do código ejetado na montagem do arquivo, criando assim uma imagem bonita do código salva também com a 
 ID, que é enviada ao telegram, e tem os arquivos gerados deletados em seguida, para não gerar inundação do servidor ou maquina.
+### exemplos de comandos de uso do bot
+ao baixar a API do ShellBot, inserir sua chave TOKEN do telegram neste bot, e executar ele, para você poder gerar temas com os seus códigos, basta realizar os comandos no telegram como o exemplo abaixo:
+#### tema cyberpunk
+```
+/cybercode #! /bin/bash
+echo "Hello Word"
+```
+que será gerada a imagem abaixo:
+![](/cybercode.png)
+### tema cyberpunk night
+```
+/cyber2code #! /bin/bash
+echo "Hello Word"
+```
+que será gerada a imagem abaixo:
+![](/cyber2code.png)
+### tema white
+```
+/whitecode #! /bin/bash
+echo "Hello Word"
+```
+que será gerada a imagem abaixo:
+![](/whitecode.png)
