@@ -20,18 +20,18 @@ ao baixar a API do ShellBot, inserir sua chave TOKEN do telegram neste bot, e ex
 echo "Hello Word"
 ```
 que será gerada a imagem abaixo:
-![](/cybercode.png)
+![](cyberpunk.png)
 ### tema cyberpunk night
 ```
 /cyber2code #! /bin/bash
 echo "Hello Word"
 ```
 que será gerada a imagem abaixo:
-![](/cyber2code.png)
+![](cyberpunk2.png)
 ### tema white
 ```
 /whitecode #! /bin/bash
 echo "Hello Word"
 ```
 que será gerada a imagem abaixo:
-![](/whitecode.png)
+![](whitecode.png)
