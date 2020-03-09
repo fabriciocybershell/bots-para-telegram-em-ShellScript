@@ -8,7 +8,7 @@ Promover a linguagem ShellScript, nativa da plataforma Linux, uma plataforma de 
 
 OBS: em cada pasta deste repositório, está uma aba descritiva do funcionamento de cada bot, com passos para se testar e utilizar no telegram. "descrições em formação, visite as issues para acompanhar o desenvolvimento do projeto, e as descrições concluidas"
 
-ficarei grato com uma avaliação, uma critica contrutiva, e/ou uma estrela !
+ficarei grato com uma avaliação, uma critica construtiva, e/ou uma estrela 🌟!
 
 ## Licença
 
