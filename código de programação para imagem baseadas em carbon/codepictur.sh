@@ -1,49 +1,49 @@
 #! /bin/bash
 #-*- coding: utf-8 -*-
 
-source ShellBot.sh
+source ShellBot.sh #importar a API do ShellBot.sh
 
-bot_token='SUA_TOKEN'
+bot_token='SUA_TOKEN' #aqui você insere sua token do botfather do telegram, para obter sua token, pesquise por @BotFather
 
-ShellBot.init --token "$bot_token" --return map 
+ShellBot.init --token "$bot_token" --return map # aqui ele loga nos servidores do telegram com sua token, sem modo de registro de log "--monitor"
 
-topo='<!DOCTYPE html>
-<html>
-<head>
+topo='<!DOCTYPE html>     # variável carregada com elementos html e css para a criação da página,
+<html>                    # aqui estão incluidos o topo de uma pagina simples em html,que seria uma
+<head>			  # parte imutável do documento ja pré definida na hora da contrução do arquivo
 <meta charset="utf-8">
 </head>
-<style>
-	.button{
-	border:solid 2px white;
-	width: 12px;
-	height: 12px;
-	border-radius: 360px;
-	float: left;
-	margin-right: 7px;
-	margin-top:-1px;
+<style>				/* estilo de como ficará a página em si, configurando o tamanho e estilo padrão da janela, para que possa ter seu estilo de cores alterados de acordo com a montagem do bot, neste caso, ele ira especificar a configuração base da janela que será formada.*/
+	.button{ /* define uma variável 'class' para a configuração dos botões da janela*/ 
+	border:solid 2px white; /* dita como será o contorno dos botões da janela*/
+	width: 12px; /* tamanho vertical*/
+	height: 12px; /* tamanho horizontal*/
+	border-radius: 360px; /* circular*/
+	float: left; /* posicionar a esquerda do anterior*/
+	margin-right: 7px; /* distância da lateral */
+	margin-top:-1px; /* distância do topo */
 	}
 	
 </style>
 '
 superior='
-<body style="background-color: #4b117f;">
-<center>
-<div style="/*display: flex;*/ background-color: #2b213a; border:solid 2px white; width: 90%; height: auto; border-radius: 9px; padding: 20px; box-shadow: 0px 0px 18px black; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: white; text-shadow: 0px 0px 10px #00b1ff; font-style: monospace; font-weight: 900; text-align:left;">
-<div><p class="button"></p><p class="button"></p><p class="button"></p></div><br><br>
+<body style="background-color: #4b117f;"> <!-- define a cor de fundo da página para roxo -->
+<center> <!-- posição central da vertical -->
+<div style="/*display: flex;*/ background-color: #2b213a; border:solid 2px white; width: 90%; height: auto; border-radius: 9px; padding: 20px; box-shadow: 0px 0px 18px black; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: white; text-shadow: 0px 0px 10px #00b1ff; font-style: monospace; font-weight: 900; text-align:left;"> <!-- define os parâmetros de cor da janela, texto padrão e estilo de fonte -->
+<div><p class="button"></p><p class="button"></p><p class="button"></p></div><br><br> <!-- posiciona os três botões da janela -->
 '
 superior2='
-<body style="background-color: white;">
-<center>
-<div style="/*display: flex;*/ background-color: #efefef; width: 90%; height: auto; border-radius: 5px; padding: 20px; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: black; font-style: normal; font-weight: 300; text-align:left;">
-<div><p class="button" style="background-color: #ff5f56; border:solid 2px #ff5f56;"></p><p class="button" style="background-color: #ffbd2e; border:solid 2px #ffbd2e;"></p><p class="button" style="background-color: #27c93f; border:solid 2px #27c93f;"></p></div><br><br>
+<body style="background-color: white;"> <!-- define a cor de fundo da página para branco -->
+<center> <!-- posição central da vertical -->
+<div style="/*display: flex;*/ background-color: #efefef; width: 90%; height: auto; border-radius: 5px; padding: 20px; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: black; font-style: normal; font-weight: 300; text-align:left;"> <!-- define os parâmetros de cor da janela, texto padrão e estilo de fonte -->
+<div><p class="button" style="background-color: #ff5f56; border:solid 2px #ff5f56;"></p><p class="button" style="background-color: #ffbd2e; border:solid 2px #ffbd2e;"></p><p class="button" style="background-color: #27c93f; border:solid 2px #27c93f;"></p></div><br><br> <!-- posiciona os três botões da janela -->
 '
 superior3='
-<body style="background-color: #133e7c;">
-<center>
-<div style="/*display: flex;*/ background-color: #091833; width: 90%; height: auto; border-radius: 5px; padding: 20px; box-shadow: 0px 0px 18px black; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: #0abdc6; font-style: normal; font-weight: 300; text-align:left;">
-<div><p class="button"style="background-color: #ea00d9; border:solid 2px #ea00d9;"></p><p class="button" style="background-color: #711c91; border:solid 2px #711c91;"></p><p class="button" style="background-color: #0abdc6; border:solid 2px #0abdc6;"></p></div><br><br>
+<body style="background-color: #133e7c;"> <!-- define a cor de fundo da página para azul escuro -->
+<center> <!-- posição central da vertical -->
+<div style="/*display: flex;*/ background-color: #091833; width: 90%; height: auto; border-radius: 5px; padding: 20px; box-shadow: 0px 0px 18px black; margin-top:30px; /*margin-left: 10px;*/ margin-bottom: 30px; color: #0abdc6; font-style: normal; font-weight: 300; text-align:left;"> <!-- define os parâmetros de cor da janela, texto padrão e estilo de fonte -->
+<div><p class="button"style="background-color: #ea00d9; border:solid 2px #ea00d9;"></p><p class="button" style="background-color: #711c91; border:solid 2px #711c91;"></p><p class="button" style="background-color: #0abdc6; border:solid 2px #0abdc6;"></p></div><br><br> <!-- posiciona os três botões da janela -->
 '
-inferior='
+inferior='  <!-- finaliza os elementos da página -->
 </h3>
 </div>
 </div>
@@ -51,7 +51,8 @@ inferior='
 </body>
 </html>
 '
-roxo='<a style="color: #ff0096; text-shadow: 0px 0px 0px white; font-style: monospace; font-weight: 900;">'
+#abaixo é definido os parâmetros de coloração de cada palavra/função/caracter de programação que for filtrada pelo SED, que serão adicionado ao redor de cada uma encontrada.
+roxo='<a style="color: #ff0096; text-shadow: 0px 0px 0px white; font-style: monospace; font-weight: 900;">' 
 brancolaranj='<a style="color: orange; text-shadow: 0px 0px 10px orange; font-style: monospace; font-weight: 900;">'
 vermelho='<a style="color: red; text-shadow: 0px 0px 10px red; font-style: monospace; font-weight: 900;">'
 branco='<a style="color: white; font-style: monospace; font-weight: 900;">'
@@ -67,24 +68,24 @@ azulclaro='<a style="color: #0abdc6; font-style: normal; font-weight: 300;">'
 azulescuro='<a style="color: #133e7c; font-style: normal; font-weight: 300;">'
 azulnight='<a style="color: #091833; font-style: normal; font-weight: 300;">'
 
-twopoints=':'
+twopoints=':' #define um caracter conflitante com o SED em uma variável, para que ele possa ser usado normalmente, porém outros demais não são aceitos até o momento.
 
-while :
+while : #em quanto ligado o loop será infinito
 do
-ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
+ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30 #obtem as atualizações e seta o limite de pessoas ao mesmo tempo, e o limite de tempo de operação do bot
 
-for id in $(ShellBot.ListUpdates)  
+for id in $(ShellBot.ListUpdates) #roda cada elemento da lista de atualizações uma a uma para ser adicionadas separadamente.   
 		do
 		(
-			case ${message_text[$id]%%@*} in
-			/start)
-			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "hello ${message_from_first_name[$id]}, me mande seu código com /<tema>code <código>, e eu gero uma imagem com ele."
+			case ${message_text[$id]%%@*} in #checa se a variavel da lista existe, se existir, começa uma execução do script
+			/start) #menssagem de boas vindas
+			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "hello ${message_from_first_name[$id]}, me mande seu código com /<tema>code <código>, e eu gero uma imagem com ele." #envia a menssagem para o ID especificado "universal" para o usuário que requisitou a ação.
 			;;
-			/help)
-			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "o bot tem os seguintes temas: \n /cybercode <código> \n /whitecode <código> \n /cyber2code <código>"
+			/help) #exibe o menu de ajuda
+			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "o bot tem os seguintes temas: \n /cybercode <código> \n /whitecode <código> \n /cyber2code <código>" # exibe o menu de ajuda com as opções do bot
 			;;
-			/cybercode*)
-			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text 'criando layout cyberpunk ...'
+			/cybercode*) # cria o layout da página com o tema cyberpunk utilizando as variáveis setadas lá no topo do script, com os elementos html e css
+			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text 'criando layout cyberpunk ...' #envia menssagem de confirmação de receibimento do comando
 			code=$(echo "${message_text[$id]}" | cut -d " " -f2-)
 			render=$(echo "${message_chat_id[$id]}" | tr -d "-")
 			echo "$topo" > $render.html
