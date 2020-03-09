@@ -12,4 +12,4 @@ ficarei grato com uma avaliação, uma critica construtiva, e/ou uma estrela �
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [licença](licenca) para obter detalhes
