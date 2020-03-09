@@ -35,3 +35,4 @@ echo "Hello Word"
 ```
 que será gerada a imagem abaixo:
 ![](whitecode.png)
+observação: ele precisa de uma maquina com interface gráfica ativada e rodando em alguma tela, pois o wkhtmltoimage utiliza motor gráfico.
