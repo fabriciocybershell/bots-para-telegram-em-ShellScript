@@ -9,7 +9,7 @@ ShellBot.init --token "$bot_token" --return map # aqui ele loga nos servidores d
 
 topo='<!DOCTYPE html>     # variável carregada com elementos html e css para a criação da página,
 <html>                    # aqui estão incluidos o topo de uma pagina simples em html,que seria uma
-<head>			  # parte imutável do documento ja pré definida na hora da contrução do arquivo
+<head>					  # parte imutável do documento ja pré definida na hora da contrução do arquivo
 <meta charset="utf-8">
 </head>
 <style>				/* estilo de como ficará a página em si, configurando o tamanho e estilo padrão da janela, para que possa ter seu estilo de cores alterados de acordo com a montagem do bot, neste caso, ele ira especificar a configuração base da janela que será formada.*/
@@ -86,19 +86,20 @@ for id in $(ShellBot.ListUpdates) #roda cada elemento da lista de atualizações
 			;;
 			/cybercode*) # cria o layout da página com o tema cyberpunk utilizando as variáveis setadas lá no topo do script, com os elementos html e css
 			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text 'criando layout cyberpunk ...' #envia menssagem de confirmação de receibimento do comando
-			code=$(echo "${message_text[$id]}" | cut -d " " -f2-)
-			render=$(echo "${message_chat_id[$id]}" | tr -d "-")
-			echo "$topo" > $render.html
-			echo "$superior" >> $render.html
+			code=$(echo "${message_text[$id]}" | cut -d " " -f2-) # separa o comando da menssagem do usuário para ser trabalhada
+			render=$(echo "${message_chat_id[$id]}" | tr -d "-") # ele elimina o caracter '-' quando ele esta em grupos, pois em grupos os bot recebem como argumento uma -100+ID
+			echo "$topo" > $render.html # grava a informação de criação do topo da página
+			echo "$superior" >> $render.html # grava os dados restantes do layout com as cores do tema desejado no fundo e na janela.
+			# na liinha abaixo contém vários argumentos de busca e substituição com sed, que pode ser muito melhorada, onde a cada palavra chave encontrada, ele ira colorir de acordo, inserindo 
 			printf "$code" | sed "s/$twopoints/$vermelho $twopoints<\/a>/" | sed "s/while/$brancolaranj while<\/a>/" | sed "s/echo/$brancolaranj echo<\/a>/" | sed "s/int /$brancolaranj int <\/a>/" | sed "s/true/$brancolaranj true<\/a>/" | sed "s/false/$brancolaranj false<\/a>/" | sed "s/True/$brancolaranj True<\/a>/" | sed "s/False/$brancolaranj False<\/a>/" | sed "s/float/$brancolaranj float<\/a>/"  | sed "s/php/$vermelho php<\/a>/" | sed "s/function/$brancolaranj function<\/a>/" | sed "s/printf/$brancolaranj printf<\/a>/"  | sed "s/\[/$roxo \[<\/a>/" | sed "s/\]/$roxo \]<\/a>/" | sed "s/(/$roxo (<\/a>/" | sed "s/)/$roxo )<\/a>/" | sed "s/\[\[/$roxo \[\[<\/a>/" | sed "s/\]\]/$roxo \]\]<\/a>/" | sed "s/))/$roxo ))<\/a>/" | sed "s/esac/$brancolaranj esac<\/a>/" | sed "s/done/$brancolaranj done<\/a>/" | sed "s/;;/$roxo ;;<\/a>/" | sed "s/{/$vermelho {<\/a>/" | sed "s/}/$vermelho }<\/a>/" | sed "s/fi /$brancolaranj fi<\/a>/" | sed "s/==/$brancolaranj ==<\/a>/"  | sed 's/^/<h3>/' | sed 's/$/<\/h3>/' >> $render.html
-			echo "$inferior" >> $render.html
-			wkhtmltoimage --quality 100 $render.html $render.jpg
-			ShellBot.sendChatAction --chat_id ${message_chat_id[$id]} --action upload_photo
-			ShellBot.sendPhoto --chat_id ${message_chat_id[$id]} --photo @$render.jpg
-			rm -r $render.html
-			rm -r $render.jpg
-			;;
-			/whitecode*)
+			echo "$inferior" >> $render.html # grava os ultimos códigos de final do html
+			wkhtmltoimage --quality 100 $render.html $render.jpg #pega o arquivo gerado e salvo com sua ID e renderiza uma imagem
+			ShellBot.sendChatAction --chat_id ${message_chat_id[$id]} --action upload_photo # sinaliza o envio da imagem
+			ShellBot.sendPhoto --chat_id ${message_chat_id[$id]} --photo @$render.jpg #envia a imagem criada
+			rm -r $render.html #deleta o arquivo html criado
+			rm -r $render.jpg #deleta a imagem criada
+			;; # fim do código
+			/whitecode*) #a partir daqui o restante é a mesma coisa, mesmos comandos, o que muda são as variáveis iniciais de gravar conteudo, que colocam outras que contenham o elemento daquele tema, que seria as cores.
 			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text 'criando layout branco ...'
 			code=$(echo "${message_text[$id]}" | cut -d " " -f2-)
 			render=$(echo "${message_chat_id[$id]}" | tr -d "-")
