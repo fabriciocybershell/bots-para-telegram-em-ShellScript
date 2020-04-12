@@ -9,7 +9,7 @@ Promover a linguagem ShellScript, nativa da plataforma Linux, uma plataforma de 
 OBS: em cada pasta deste repositório, está uma aba descritiva do funcionamento de cada bot, com passos para se testar e utilizar no telegram. "descrições em formação, visite as issues para acompanhar o desenvolvimento do projeto, e as descrições concluidas"
 
 compartilhe no telegram:
-<script async src="https://telegram.org/js/telegram-widget.js?8" data-telegram-share-url="https://github.com/fabriciocaetano/bots-para-telegram-em-ShellScript" data-comment="projeto open-source Bots Telegram em ShellScript" data-size="large"></script>
+[compartilhar via telegram](https://t.me/share/url?url=https://github.com/fabriciocaetano/bots-para-telegram-em-ShellScript&text='projeto open-source Bots Telegram em ShellScript')
 
 ficarei grato com uma avaliação, doação, critica construtiva, ou uma estrela 🌟!
 
