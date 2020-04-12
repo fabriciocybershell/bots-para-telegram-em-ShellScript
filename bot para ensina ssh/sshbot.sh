@@ -5,6 +5,7 @@ source ShellBot.sh
 bot_token='SUA_TOKEN'
 
 ShellBot.init --token "$bot_token" --return map 
+# criar botões de seleção
 inicio='
 [ "comunicação ssh" ],
 [ "como funciona" ], 
@@ -25,6 +26,7 @@ conect='
 [ "linux" , "windows" ],
 [ "android" ]
 '
+# criar botão com link externo
 
 app=''
 ShellBot.InlineKeyboardButton --button 'app' --line 1 --text 'JuiceSSH' --callback_data '1' --url 'https://play.google.com/store/apps/details?id=com.sonelli.juicessh'
@@ -37,7 +39,7 @@ ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
 
 for id in $(ShellBot.ListUpdates) 
 		do
-		(
+		(	#opções do bot, seguida por roteiros de mensagens.
 			case ${message_text[$id]%%@*} in
 			/start)
 			ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "olá ${message_from_first_name[$id]}, eu sou um bot de ssh, e estou aqui para ajudalo a configurar uma conexão por ssh."
