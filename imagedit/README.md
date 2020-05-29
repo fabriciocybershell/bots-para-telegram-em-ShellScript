@@ -15,3 +15,4 @@ o bot recebe a imagem, define uma resolução padrão de 4k como padrão: 3840x2
 <p float="left">
 <img src="imagem2.png" width="400px">
 </p>
+OBS: eu sou o aoutor desta imagem utilizada neste exemplo e perfil, além de outros inúmeros conjuntos de imagem criadas por mim. esta imagem é a representação de um shinigame criado por mim, seu nome é lil, o deus da morte!.
