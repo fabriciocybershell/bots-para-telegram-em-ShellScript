@@ -6,7 +6,7 @@ você seleciona as opções e ele mostra passo a passo como realizar a configura
 este bot tem o objetivo de ajudar a usuários comuns ou pessoas que já entendem um pouco do assunto a realizarem uma comunicação ssh por diferentes sistemas, ainda em desenvolvimento. porém já vimos bons resultados.
 
 ## método
-utilizamos apenas ShellScript, nenhum programa externos. usando botões seletores para facilitar a navegação do usuário comum, com tempos de parada para o usuário poder acompanhar em quanto realiza a configuração.
+utilizamos apenas ShellScript, nenhum programa externo. usando botões seletores para facilitar a navegação do usuário comum, com tempos de parada para o usuário poder acompanhar em quanto realiza a configuração.
 
 ## iniciando com o bot
 
