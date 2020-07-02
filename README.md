@@ -13,7 +13,7 @@ compartilhe no telegram:
 
 ficarei grato com uma avaliação, doação, critica construtiva, ou uma estrela 🌟!
 
-[doar](https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=535976028-fcf66071-6c7b-49f8-a786-92e1d75ca74c)
+[doar](https://www.mercadopago.com.br/checkout/v1/redirect/ed4dbb40-dc52-4db0-9cc0-9bb2a4c0e986/payment-option-form/?preference-id=535976028-be4751ef-0b3b-4123-8cc0-5f49227f850e&p=53a4ea0bad37103a9c1706047f168dd3)
 
 ## Licença
 
